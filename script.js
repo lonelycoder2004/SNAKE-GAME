@@ -22,6 +22,7 @@ let running = false;
 let paused = false;
 let timer = null;
 let audioContext;
+let lastMoveAt = 0;
 
 function resetGame() {
   clearTimeout(timer);
@@ -94,6 +95,7 @@ function scheduleTick() {
 
 function tick() {
   if (!running || paused) return;
+  lastMoveAt = performance.now();
 
   dir = nextDir;
   const head = {
@@ -218,6 +220,10 @@ document.querySelectorAll("[data-dir]").forEach(button => {
 });
 
 startBtn.addEventListener("click", startGame);
+
+window.addEventListener("blur", () => {
+  if (running && !paused) togglePause();
+});
 pauseBtn.addEventListener("click", togglePause);
 
 let touchStart = null;
