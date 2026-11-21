@@ -147,7 +147,7 @@ canvas {
   cursor: pointer;
 }
 
-.keypad {
+.select.secondary { padding: 10px 12px; font-size: 11px; }\n\n.keypad {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 9px 22px;
