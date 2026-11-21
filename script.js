@@ -24,6 +24,7 @@ let timer = null;
 let audioContext;
 
 function resetGame() {
+  clearTimeout(timer);
   snake = [
     { x: 15, y: 10 },
     { x: 14, y: 10 },
@@ -130,6 +131,7 @@ function tick() {
 function setDirection(x, y) {
   if (!running) return;
   if (dir.x === -x && dir.y === -y) return;
+  if (nextDir.x === x && nextDir.y === y) return;
   nextDir = { x, y };
 }
 
