@@ -3,7 +3,8 @@ const ctx = canvas.getContext("2d");
 const scoreEl = document.getElementById("score");
 const highScoreEl = document.getElementById("high-score");
 const message = document.getElementById("message");
-const startBtn = document.getElementById("start");\nconst pauseBtn = document.getElementById("pause");
+const startBtn = document.getElementById("start");
+const pauseBtn = document.getElementById("pause");
 
 const cols = 30;
 const rows = 20;
@@ -15,7 +16,8 @@ let food;
 let dir;
 let nextDir;
 let score;
-let highScore = Number(localStorage.getItem("nokiaSnakeHighScore") || 0);\nconst prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+let highScore = Number(localStorage.getItem("nokiaSnakeHighScore") || 0);
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 let running = false;
 let paused = false;
 let timer = null;
@@ -210,7 +212,8 @@ document.querySelectorAll("[data-dir]").forEach(button => {
   });
 });
 
-startBtn.addEventListener("click", startGame);\npauseBtn.addEventListener("click", togglePause);
+startBtn.addEventListener("click", startGame);
+pauseBtn.addEventListener("click", togglePause);
 
 resetGame();
 
