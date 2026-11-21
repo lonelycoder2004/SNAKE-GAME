@@ -15,7 +15,7 @@ let food;
 let dir;
 let nextDir;
 let score;
-let highScore = Number(localStorage.getItem("nokiaSnakeHighScore") || 0);
+let highScore = Number(localStorage.getItem("nokiaSnakeHighScore") || 0);\nconst prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 let running = false;
 let paused = false;
 let timer = null;
@@ -86,7 +86,7 @@ function startGame() {
 function scheduleTick() {
   clearTimeout(timer);
   if (!running || paused) return;
-  timer = setTimeout(tick, speed());
+  timer = setTimeout(tick, prefersReducedMotion ? Math.max(speed(), 120) : speed());
 }
 
 function tick() {
