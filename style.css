@@ -87,7 +87,7 @@ canvas {
 
 .status strong { font-weight: 700; }
 
-canvas { transition: opacity 90ms linear; }
+canvas { transition: opacity 90ms linear; touch-action: none; }
 
 .message {
   position: absolute;
@@ -125,6 +125,7 @@ canvas { transition: opacity 90ms linear; }
   font-size: 18px;
   box-shadow: inset 2px 2px 2px #777, inset -2px -2px 2px #333;
   touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
   cursor: pointer;
 }
 
