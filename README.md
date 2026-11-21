@@ -2,6 +2,10 @@
 
 A web remake of the classic Snake game inspired by the old Nokia phone experience.
 
+## Live Demo
+
+**GitHub Pages:** https://lonelycoder2004.github.io/SNAKE-GAME/
+
 ## Features
 
 - Classic monochrome LCD-style game screen
@@ -20,7 +24,7 @@ A web remake of the classic Snake game inspired by the old Nokia phone experienc
 |---|---|
 | Move | Arrow keys / WASD |
 | Start | Space / START |
-| Pause | P |
+| Pause | P / Space |
 | Restart | Space / START after game over |
 
 ## Run locally
