@@ -3,7 +3,7 @@ const ctx = canvas.getContext("2d");
 const scoreEl = document.getElementById("score");
 const highScoreEl = document.getElementById("high-score");
 const message = document.getElementById("message");
-const startBtn = document.getElementById("start");
+const startBtn = document.getElementById("start");\nconst pauseBtn = document.getElementById("pause");
 
 const cols = 30;
 const rows = 20;
@@ -210,7 +210,7 @@ document.querySelectorAll("[data-dir]").forEach(button => {
   });
 });
 
-startBtn.addEventListener("click", startGame);
+startBtn.addEventListener("click", startGame);\npauseBtn.addEventListener("click", togglePause);
 
 resetGame();
 
