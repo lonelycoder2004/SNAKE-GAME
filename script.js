@@ -25,6 +25,7 @@ let audioContext;
 
 function resetGame() {
   clearTimeout(timer);
+  if (canvas) canvas.style.opacity = "1";
   snake = [
     { x: 15, y: 10 },
     { x: 14, y: 10 },
