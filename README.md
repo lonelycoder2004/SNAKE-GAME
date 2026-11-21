@@ -1,16 +1,17 @@
 # 🐍 Nokia Snake
 
+> ## 🎮 [PLAY THE GAME](https://lonelycoder2004.github.io/SNAKE-GAME/)
+>
+> **Live Demo → https://lonelycoder2004.github.io/SNAKE-GAME/**
+
 A web remake of the classic Snake game inspired by the old Nokia phone experience.
-
-## Live Demo
-
-**GitHub Pages:** https://lonelycoder2004.github.io/SNAKE-GAME/
 
 ## Features
 
 - Classic monochrome LCD-style game screen
 - Keyboard controls: Arrow keys or WASD
 - Touch-friendly Nokia-style D-pad
+- Swipe controls on mobile
 - Score and browser-saved high score
 - Pause and restart
 - Increasing speed as the snake grows
