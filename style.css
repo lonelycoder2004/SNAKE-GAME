@@ -41,6 +41,14 @@ body {
     0 28px 50px #0009;
 }
 
+.model {
+  margin-top: -12px;
+  margin-bottom: 14px;
+  color: #66655d;
+  font: 700 8px monospace;
+  letter-spacing: 2px;
+}
+
 .brand {
   margin-bottom: 17px;
   color: #4c4b46;
@@ -180,4 +188,17 @@ canvas { transition: opacity 90ms linear; touch-action: none; }
     border-radius: 27px 27px 38px 38px;
   }
   .controls { gap: 22px; }
+}
+
+.lcd::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 3px,
+    rgba(36, 61, 11, 0.08) 4px
+  );
 }
