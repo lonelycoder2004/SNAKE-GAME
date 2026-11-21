@@ -22,7 +22,6 @@ let running = false;
 let paused = false;
 let timer = null;
 let audioContext;
-let lastMoveAt = 0;
 
 function resetGame() {
   clearTimeout(timer);
@@ -76,6 +75,13 @@ function draw() {
 
   ctx.fillRect(food.x * cell + 1, food.y * cell + 1, 6, 6);
   ctx.fillRect(food.x * cell + 3, food.y * cell - 1, 2, 2);
+
+  if (!prefersReducedMotion && running && !paused) {
+    const pulse = Math.sin(performance.now() / 180) > 0;
+    ctx.globalAlpha = pulse ? 1 : 0.65;
+    ctx.fillRect(food.x * cell + 2, food.y * cell + 2, 4, 4);
+    ctx.globalAlpha = 1;
+  }
 }
 
 function startGame() {
@@ -95,8 +101,6 @@ function scheduleTick() {
 
 function tick() {
   if (!running || paused) return;
-  lastMoveAt = performance.now();
-
   dir = nextDir;
   const head = {
     x: snake[0].x + dir.x,
