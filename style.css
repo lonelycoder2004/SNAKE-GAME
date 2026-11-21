@@ -80,12 +80,12 @@ canvas {
   display: flex;
   justify-content: space-between;
   color: var(--pixel);
-  font: 700 12px monospace;
+  font: 700 10px monospace;
   letter-spacing: 1px;
   pointer-events: none;
 }
 
-.message {
+.status strong { font-weight: 700; }\n\n.message {
   position: absolute;
   inset: 0;
   display: grid;
