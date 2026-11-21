@@ -17,7 +17,8 @@
         <div class="lcd">
           <div class="status" aria-live="polite">
             <span>SNAKE</span>
-            <span>SCORE <strong id="score">0000</strong></span><span>HI <strong id="high-score">0000</strong></span>
+            <span>SCORE <strong id="score">0000</strong></span>
+            <span>HI <strong id="high-score">0000</strong></span>
           </div>
           <canvas id="game" width="240" height="160" aria-label="Snake game board"></canvas>
           <div class="message" id="message">PRESS START</div>
@@ -31,7 +32,8 @@
           <button type="button" data-dir="down" class="down" aria-label="Move down">▼</button>
           <button type="button" data-dir="right" class="right" aria-label="Move right">▶</button>
         </div>
-        <button type="button" id="pause" class="select secondary" aria-label="Pause or resume game">PAUSE</button>\n        <button type="button" id="start" class="select" aria-label="Start or restart game">START</button>
+        <button type="button" id="pause" class="select secondary" aria-label="Pause or resume game">PAUSE</button>
+        <button type="button" id="start" class="select" aria-label="Start or restart game">START</button>
       </div>
 
       <div class="keypad" aria-hidden="true">
@@ -42,7 +44,8 @@
       </div>
     </div>
 
-    <p class="hint">ARROWS / WASD · SPACE START · P PAUSE</p>\n    <p class="high-score-note" id="high-score-note">HIGH SCORE IS SAVED ON THIS DEVICE</p>
+    <p class="hint">ARROWS / WASD · SPACE START · P PAUSE</p>
+    <p class="high-score-note" id="high-score-note">HIGH SCORE IS SAVED ON THIS DEVICE</p>
   </main>
 
   <script src="script.js"></script>
