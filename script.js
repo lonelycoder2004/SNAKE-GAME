@@ -213,3 +213,20 @@ document.querySelectorAll("[data-dir]").forEach(button => {
 startBtn.addEventListener("click", startGame);
 
 resetGame();
+
+
+function drawGameOverFlash() {
+  let visible = true;
+  let flashes = 0;
+  const flash = () => {
+    if (flashes >= 4) {
+      draw();
+      return;
+    }
+    visible = !visible;
+    canvas.style.opacity = visible ? "1" : "0.35";
+    flashes += 1;
+    setTimeout(flash, 90);
+  };
+  flash();
+}
