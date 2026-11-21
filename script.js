@@ -92,6 +92,7 @@ function startGame() {
   pauseBtn.hidden = false;
   resetGame();
   running = true;
+  message.textContent = "";
   message.hidden = true;
   scheduleTick();
   beep(440, 55);
