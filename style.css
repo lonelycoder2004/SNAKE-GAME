@@ -85,7 +85,7 @@ canvas {
   pointer-events: none;
 }
 
-.status strong { font-weight: 700; }\n\n.message {
+.status strong { font-weight: 700; }\n\ncanvas { transition: opacity 90ms linear; }\n\n.message {
   position: absolute;
   inset: 0;
   display: grid;
