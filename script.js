@@ -205,6 +205,7 @@ document.addEventListener("keydown", event => {
   if (event.key === " ") {
     event.preventDefault();
     if (!running) startGame();
+    else togglePause();
   }
 
   if (event.key.toLowerCase() === "p") {
