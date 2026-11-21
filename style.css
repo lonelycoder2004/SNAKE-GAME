@@ -140,24 +140,45 @@ canvas {
 
 .dpad {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  width: 100%;
-  gap: 8px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 52px);
+  width: min(100%, 270px);
+  gap: 6px;
 }
 
 .dpad button {
   position: static;
   width: 100%;
-  height: 62px;
+  height: 52px;
   border: 0;
   border-radius: 8px;
   background: #55544d;
   color: #bbb;
-  font-size: 28px;
+  font-size: 25px;
   box-shadow: inset 2px 2px 2px #777, inset -2px -2px 2px #333;
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
   cursor: pointer;
+}
+
+.dpad .up {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.dpad .left {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.dpad .down {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.dpad .right {
+  grid-column: 3;
+  grid-row: 2;
 }
 
 .dpad button:focus-visible,
@@ -171,11 +192,6 @@ canvas {
   transform: translateY(2px);
   box-shadow: inset 2px 2px 3px #222;
 }
-
-.dpad .up { grid-column: 2; }
-.dpad .left { grid-column: 1; grid-row: 1; }
-.dpad .down { grid-column: 3; grid-row: 1; }
-.dpad .right { grid-column: 4; grid-row: 1; }
 
 .select {
   border: 0;
@@ -224,12 +240,14 @@ canvas {
   }
 
   .dpad {
-    gap: 6px;
+    width: min(100%, 250px);
+    grid-template-rows: repeat(3, 48px);
+    gap: 5px;
   }
 
   .dpad button {
-    height: 58px;
-    font-size: 25px;
+    height: 48px;
+    font-size: 23px;
   }
 
   .action-buttons {
