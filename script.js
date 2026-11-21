@@ -138,6 +138,7 @@ function togglePause() {
   paused = !paused;
   message.hidden = !paused;
   message.textContent = paused ? "PAUSED" : "";
+  pauseBtn.textContent = paused ? "RESUME" : "PAUSE";
   if (paused) {
     clearTimeout(timer);
   } else {
@@ -150,7 +151,9 @@ function gameOver() {
   clearTimeout(timer);
   message.hidden = false;
   message.textContent = "GAME OVER";
+  pauseBtn.textContent = "PAUSE";
   beep(180, 180);
+  if (!prefersReducedMotion) drawGameOverFlash();
 }
 
 function initAudio() {
