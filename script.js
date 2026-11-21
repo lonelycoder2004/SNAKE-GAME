@@ -88,7 +88,8 @@ function draw() {
 
 function startGame() {
   initAudio();
-  startBtn.textContent = "RESTART";
+  startBtn.hidden = true;
+  pauseBtn.hidden = false;
   resetGame();
   running = true;
   message.hidden = true;
@@ -122,11 +123,11 @@ function tick() {
 
   if (head.x === food.x && head.y === food.y) {
     score += 10;
-    updateScore();
     if (score > highScore) {
       highScore = score;
       localStorage.setItem("nokiaSnakeHighScore", String(highScore));
     }
+    updateScore();
     food = randomFood();
     beep(660, 65);
   } else {
@@ -164,6 +165,7 @@ function gameOver() {
   message.textContent = "GAME OVER";
   pauseBtn.textContent = "PAUSE";
   startBtn.textContent = "RESTART";
+  startBtn.hidden = false;
   beep(180, 180);
   if (!prefersReducedMotion) drawGameOverFlash();
 }
