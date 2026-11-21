@@ -218,6 +218,29 @@ document.querySelectorAll("[data-dir]").forEach(button => {
 startBtn.addEventListener("click", startGame);
 pauseBtn.addEventListener("click", togglePause);
 
+let touchStart = null;
+
+canvas.addEventListener("touchstart", event => {
+  const touch = event.changedTouches[0];
+  touchStart = { x: touch.clientX, y: touch.clientY };
+}, { passive: true });
+
+canvas.addEventListener("touchend", event => {
+  if (!touchStart) return;
+  const touch = event.changedTouches[0];
+  const dx = touch.clientX - touchStart.x;
+  const dy = touch.clientY - touchStart.y;
+  touchStart = null;
+
+  if (Math.max(Math.abs(dx), Math.abs(dy)) < 18) return;
+
+  if (Math.abs(dx) > Math.abs(dy)) {
+    setDirection(dx > 0 ? 1 : -1, 0);
+  } else {
+    setDirection(0, dy > 0 ? 1 : -1);
+  }
+}, { passive: true });
+
 resetGame();
 
 
