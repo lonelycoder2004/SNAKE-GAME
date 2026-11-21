@@ -41,6 +41,22 @@ body {
     0 28px 50px #0009;
 }
 
+.battery {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2px;
+  width: 34px;
+  height: 7px;
+  margin: -9px 4px 5px auto;
+  padding: 1px;
+  border: 1px solid #66655d;
+}
+
+.battery span {
+  flex: 1;
+  background: #66655d;
+}
+
 .model {
   margin-top: -12px;
   margin-bottom: 14px;
