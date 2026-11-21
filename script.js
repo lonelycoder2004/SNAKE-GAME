@@ -86,6 +86,7 @@ function draw() {
 
 function startGame() {
   initAudio();
+  startBtn.textContent = "RESTART";
   resetGame();
   running = true;
   message.hidden = true;
@@ -160,6 +161,7 @@ function gameOver() {
   message.hidden = false;
   message.textContent = "GAME OVER";
   pauseBtn.textContent = "PAUSE";
+  startBtn.textContent = "RESTART";
   beep(180, 180);
   if (!prefersReducedMotion) drawGameOverFlash();
 }
