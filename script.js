@@ -54,6 +54,7 @@ function randomFood() {
 
 function updateScore() {
   scoreEl.textContent = String(score).padStart(4, "0");
+  highScoreEl.textContent = String(highScore).padStart(4, "0");
 }
 
 function speed() {
